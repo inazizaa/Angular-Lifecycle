@@ -1,0 +1,15 @@
+<h1>PENGGUNAAN LIFECYCLE ANGULAR</h1>
+<h3>Untuk melihat perubahannya bisa melalui mode developer tools di browser(rekomendasi: google chrome)</h3>
+<h3>===============================================================================</h3>
+<h2>Given Number</h2>
+<p>ngDoCheck, ngAfterContentChecked, ngAfterViewChecked akan dipanggil kembali ketika button dibawah ini di klik karena
+  akan mengkalkulasi ulang setiap ada perubahan data</p>
+<h2>{{data}}</h2>
+<button type="button" style="background-color: darkviolet" (click)="fnAddNumber()">Add Number</button>
+<button type="button" (click)="deleteNumber()">Clear Number</button><br><br>
+<h3>===============================================================================</h3>
+<h2>Input Text</h2>
+<p>ngOnChanges akan dipanggil ketika textbox dibawah ini diinput sesuai apa yang ada didalam <b>*ngIf</b> => inas</p>
+<input type="text" [(ngModel)]="datanya" /><br>
+
+<app-lifecycletwo [datanya]="datanya" *ngIf="datanya=='inas'"></app-lifecycletwo>
